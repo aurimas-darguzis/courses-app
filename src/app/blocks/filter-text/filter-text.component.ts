@@ -43,7 +43,7 @@ export class FilterTextComponent implements OnInit {
 
   filterChanged(event: any) {
     event.preventDefault();
-    console.log(`Filter Changed: ${this.filter}`);
+    // console.log(`Filter Changed: ${this.filter}`);
     this.changed.emit(this.filter);
   }  
 

@@ -10,7 +10,6 @@ import { store, filterCourses } from '../store';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-  courses: Course[];
   filteredCourses = [];
 
   constructor(private _courseService: CourseService) {

@@ -2,7 +2,7 @@ import { Course } from '../courses/course'
 import { IAppState } from './IAppState';
 import { FILTER_COURSES } from './actions';
 
- const courses = [
+const courses = [
     {
         "id": 1,
         "name": "Building Apps with React",
@@ -27,8 +27,7 @@ const initialState: IAppState = {
 
 function filterCourses (state, action): IAppState {
   return Object.assign({}, state, {
-    filteredCourses: state.courses.filter(c => c.name.toLowerCase().indexOf
-      (action.searchText.toLowerCase()) > -1)
+    filteredCourses: state.courses.filter(c => c.name.toLowerCase().indexOf(action.searchText.toLowerCase()) > -1)
   })
 }
 
