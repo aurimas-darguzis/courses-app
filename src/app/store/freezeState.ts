@@ -12,3 +12,12 @@ function deepFreeze (o) {
 
   return o;
 }
+
+export default function freezeState(store) {
+  return (next) => (action) => {
+    const result = next(action);
+    const state = store.getState();
+    deepFreeze(state);
+    return result;
+  }
+}
