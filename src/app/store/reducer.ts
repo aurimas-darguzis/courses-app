@@ -27,7 +27,7 @@ const initialState: IAppState = {
 
 function filterCourses (state, action): IAppState {
   return Object.assign({}, state, {
-    filteredCourses: state.courses.fitler(c => c.name.toLowerCase().indexOf
+    filteredCourses: state.courses.filter(c => c.name.toLowerCase().indexOf
       (action.searchText.toLowerCase()) > -1)
   })
 }
@@ -37,6 +37,6 @@ export function reducer (state = initialState, action) {
     case FILTER_COURSES:
       return filterCourses(state, action)
     default: 
-      return state  
+      return state
   }
 }
